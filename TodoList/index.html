@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        ul li::before{
+            content:"";
+            width: 28px;
+            height: 28px;
+            background-image: url(./images/unchecked.png);
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            left:0px;
+            top:8px;
+        }
+        ul li.checked{
+            color:#555;
+            text-decoration: line-through;
+        }
+        ul li.checked::before{
+            background-image: url(./images/checked.png);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- web-main-container-start -->
+    <div class="container w-full h-screen flex justify-center items-center bg-gradient-to-l from-violet-500 to-fuchsia-500">
+        <!-- todo-main-container-start -->
+        <div class="todo-main max-w-[450px] w-full bg-white rounded-md p-4">
+            <h1 class="text-xl font-bold">Todo List</h1>
+            <!-- search-box-start -->
+            <div class="search-box flex items-center justify-between rounded-[30px] mb-[25px]">
+                <input type="text" id="input-box" placeholder="Enter the Task" class="flex-1 p-2 outline-none">
+                <button id="btn" class="py-[16px] px-[50px] bg-orange-600 text-white rounded-full">Add</button>
+            </div>
+            <!-- search-box-end -->
+             <!-- list-start -->
+              <ul id="list-container">
+              </ul>
+             <!-- list-end -->
+
+        </div>
+        <!-- todo-main-container-end -->
+
+    </div>
+    <!-- web-main-container-end -->
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
